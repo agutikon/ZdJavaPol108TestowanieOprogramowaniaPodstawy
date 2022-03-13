@@ -7,16 +7,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-    private static Calculator calculator;
 
     @BeforeAll
-    static void init() {
-        calculator = new Calculator();
-    }
+    static void init() {}
 
     @Test
     void shouldAddTwoValues() {
         //given
+        Calculator calculator = new Calculator();
         int expected = 5;
         //when
         int result = calculator.add(2, 3);
@@ -28,6 +26,7 @@ class CalculatorTest {
     @Test
     void shouldSubtractTwoValues() {
         //given
+        Calculator calculator = new Calculator();
         int expected = -1;
         //when
         int result = calculator.subtract(2, 3);
